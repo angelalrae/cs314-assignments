@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'loraregular';
+    src: url('lora-regular-webfont.eot');
+    src: url('lora-regular-webfont.eot?#iefix') format('embedded-opentype'), url('lora-regular-webfont.woff2') format('woff2'), url('lora-regular-webfont.woff') format('woff'), url('lora-regular-webfont.ttf') format('truetype'), url('lora-regular-webfont.svg#loraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: 'loraregular', sans-serif;
+    cursor: default;
+    padding: 1em;
+}
+
+body {
+    background: #ce9190;
+}
+
+header {
+    position: relative;
+    text-align: center;
+}
+
+.button {
+    position: relative;
+    text-align: center;
+    font-size: 1em;
+    transition: opacity 1s ease;
+}
+
+a {
+    color: white;
+}
+
+.button:hover {
+    animation: GROW-ANIMATION 1.2s infinite;
+}
+
+@-webkit-keyframes GROW-ANIMATION {
+    0%,
+    100% {
+        font-size: 1em;
+    }
+    70% {
+        font-size: 2em;
+    }
+}
+
+@-moz-keyframes GROW-ANIMATION {
+    0%,
+    100% {
+        font-size: 1em;
+    }
+    70% {
+        font-size: 2em;
+    }
+}
+
+@-o-keyframes GROW-ANIMATION {
+    0%,
+    100% {
+        font-size: 1em;
+    }
+    70% {
+        font-size: 2em;
+    }
+}
+
+@keyframes GROW-ANIMATION {
+    0%,
+    100% {
+        font-size: 1em;
+    }
+    70% {
+        font-size: 2em;
+    }
+}
