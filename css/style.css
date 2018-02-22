@@ -1,0 +1,147 @@
+header {
+    font-size: 1em;
+    height: 4em;
+    line-height: 4em;
+    padding-left: 2em;
+    background: #32161f;
+    color: white;
+}
+
+.link {
+    padding: .5em;
+}
+
+.link:visited {
+    color: white;
+}
+
+.link:hover {
+    color: #83b692;
+}
+
+#logo {
+    float: right;
+    height: 3em;
+    padding-right: 2em;
+    padding-top: .5em;
+}
+
+.headline {
+    height: 18em;
+    background: #775b59;
+    text-align: center;
+}
+
+h2 {
+    padding-top: 1.5em;
+}
+
+#description {
+    color: white;
+    padding-left: 3em;
+    padding-right: 3em;
+    line-height: 1.25em;
+}
+
+.button,
+.enter-button {
+    background: #dfbbb1;
+    border: 2px solid #db504a;
+    border-radius: 8px;
+    padding: 1em 1em;
+    display: inline-block;
+    margin-top: 1.5em;
+}
+
+.button p,
+.enter-button p {
+    color: #db504a;
+    text-decoration: underline;
+}
+
+.button {
+    margin-top: 0;
+}
+
+.button:hover,
+.enter-button:hover {
+    background: #db504a;
+    border: 2px solid #dfbbb1;
+}
+
+.button:hover p,
+.enter-button:hover p {
+    color: #dfbbb1;
+    animation: GROW-ANIMATION 1.2s infinite;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.subsection {
+    padding: .5em;
+    margin-top: 1.5em;
+    text-align: center;
+    width: 30%;
+}
+
+.food-pic {
+    height: 4em;
+}
+
+.subsection-text {
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+}
+
+@-webkit-keyframes GROW-ANIMATION {
+    0%,
+    100% {
+        font-size: 1em;
+    }
+    50% {
+        font-size: 1.15em;
+    }
+}
+
+@-moz-keyframes GROW-ANIMATION {
+    0%,
+    100% {
+        font-size: 1em;
+    }
+    50% {
+        font-size: 1.15em;
+    }
+}
+
+@-o-keyframes GROW-ANIMATION {
+    0%,
+    100% {
+        font-size: 1em;
+    }
+    50% {
+        font-size: 1.15em;
+    }
+}
+
+@keyframes GROW-ANIMATION {
+    0%,
+    100% {
+        font-size: 1em;
+    }
+    50% {
+        font-size: 1.15em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .subsection {
+        background: lightgray;
+        border-radius: 30px;
+        width: 90%;
+        margin: 0, 1em, 2em, 1em;
+    }
+}
