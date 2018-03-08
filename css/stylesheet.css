@@ -129,12 +129,24 @@ header {
 }
 
 .flex-container p,
-.flex-container iframe {
+.captioned-video {
     margin: 1em;
 }
 
 iframe {
     border: 3px solid #343434;
+}
+
+.caption,
+.caption a {
+    font-family: 'montserratlight';
+    font-size: .65em;
+    max-width: 100%;
+}
+
+.caption a,
+.credit a {
+    font-size: 1em;
 }
 
 #service,

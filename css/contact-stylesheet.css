@@ -142,6 +142,10 @@ textarea {
     color: #f7fff7;
 }
 
+.credit a {
+    font-size: 1em;
+}
+
 footer {
     position: fixed;
     background: #3891a6;

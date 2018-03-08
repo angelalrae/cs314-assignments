@@ -100,10 +100,23 @@ td li i {
     justify-content: center;
 }
 
-.flex-photos img {
+.captioned-photo {
     margin: 1em;
+}
+
+.flex-photos img {
     height: 200px;
-    border: 3px solid #343434;
+    border: 2px solid #343434;
+}
+
+.caption {
+    font-family: 'montserratlight';
+    font-size: .65em;
+    max-width: 200px;
+}
+
+.credit a {
+    font-size: 1em;
 }
 
 footer {
