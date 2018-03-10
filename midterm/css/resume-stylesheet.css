@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'playfair_displaybold';
+    src: url('playfairdisplay-bold-webfont.eot');
+    src: url('playfairdisplay-bold-webfont.eot?#iefix') format('embedded-opentype'), url('playfairdisplay-bold-webfont.woff2') format('woff2'), url('playfairdisplay-bold-webfont.woff') format('woff'), url('playfairdisplay-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratlight';
+    src: url('montserrat-light-webfont.eot');
+    src: url('montserrat-light-webfont.eot?#iefix') format('embedded-opentype'), url('montserrat-light-webfont.woff2') format('woff2'), url('montserrat-light-webfont.woff') format('woff'), url('montserrat-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratlight_italic';
+    src: url('montserrat-lightitalic-webfont.eot');
+    src: url('montserrat-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('montserrat-lightitalic-webfont.woff2') format('woff2'), url('montserrat-lightitalic-webfont.woff') format('woff'), url('montserrat-lightitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    background: #f7fff7;
+}
+
+.images {
+    width: 100%;
+    z-index: 0;
+}
+
+.icon {
+    display: block;
+    height: 4em;
+    margin: 2em auto;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    background: rgba(34, 34, 34, .3);
+    z-index: 2;
+    height: 100px;
+    top: 0;
+}
+
+.logo {
+    position: absolute;
+    opacity: 1;
+}
+
+#logo {
+    height: 80px;
+    margin: 10px auto;
+}
+
+.overlay a {
+    float: right;
+    line-height: 100px;
+    margin: auto 1em;
+    color: #02111b;
+}
+
+.overlay a:hover {
+    color: #3891a6;
+}
+
+.content {
+    margin: auto;
+    padding: 0 3em 4em;
+    width: 70%;
+}
+
+h2 {
+    font-family: 'playfair_displaybold';
+    margin: 1em auto .3em;
+}
+
+h6 {
+    margin-top: 1em;
+}
+
+.date {
+    font-family: 'montserratlight';
+    text-align: right;
+}
+
+td a:hover {
+    color: #3891a6;
+}
+
+td li i {
+    font-family: montserratlight_italic;
+}
+
+.flex-photos {
+    display: flex;
+    justify-content: center;
+}
+
+.captioned-photo {
+    margin: 1em;
+}
+
+.flex-photos img {
+    height: 200px;
+    border: 2px solid #343434;
+}
+
+.caption {
+    font-family: 'montserratlight';
+    font-size: .65em;
+    max-width: 200px;
+}
+
+.credit a {
+    font-size: 1em;
+}
+
+footer {
+    background: #3891a6;
+    min-height: 2em;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+}
+
+footer img {
+    height: .8em;
+    margin-right: 5px;
+}
+
+footer a {
+    line-height: 1.25em;
+    padding: 0 1em;
+    color: #02111b;
+}
+
+footer a:visited {
+    color: #02111b;
+}
+
+footer a:hover {
+    color: #f7fff7;
+}
+
+.footer-link {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 864px) {
+    .content {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .flex-photos {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        padding: 0 0;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    #logo {
+        height: 50px;
+    }
+    .overlay {
+        height: 70px;
+    }
+    .overlay a {
+        font-size: .8em;
+        line-height: 70px;
+    }
+    h1 {
+        font-size: 2.3em;
+    }
+    .credit {
+        font-size: .6em;
+    }
+    .footer-link {
+        display: block;
+    }
+}
