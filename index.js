@@ -108,3 +108,93 @@ function integerSwap() {
     }
 }
 // integerSwap();
+
+//#7
+function longestString() {
+    let inputString = prompt("Enter a list of strings separated by commas");
+    if (inputString == null) {
+        return;
+    } else if (inputString == "") {
+        alert("List should have at least one string");
+    } else {
+        let stringsArray = inputString.split(",");
+        let longestStr = "";
+        for (x in stringsArray) {
+            stringsArray[x] = stringsArray[x].trim();
+            if (stringsArray[x].length > longestStr.length) {
+                longestStr = stringsArray[x];
+            }
+        }
+        alert(longestStr);
+    }
+}
+// longestString();
+
+//#8
+function largestEvenNumber() {
+    let inputString = prompt("Enter a list of numbers separated by commas");
+    if (inputString == null) {
+        return;
+    } else if (inputString == "") {
+        alert("List should have at least one number");
+    } else {
+        let numArray = inputString.split(",");
+        let largestEven = -1;
+        for (x in numArray) {
+            numArray[x] = numArray[x].trim();
+            if (numArray[x] % 2 == 0 && numArray[x] > largestEven) {
+                largestEven = numArray[x];
+            }
+        }
+        if (largestEven == -1) {
+            alert("No even numbers given")
+        } else { alert(largestEven); }
+    }
+}
+// largestEvenNumber();
+
+//#9
+function currentDayTime() {
+    let now = new Date();
+
+    let date = now.getDay();
+    let day = "default";
+    switch (date) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+            break;
+    }
+
+    let hours = now.getHours();
+    let ampm = "AM";
+    if (hours > 12) {
+        hours = hours - 12;
+        ampm = "PM";
+    }
+    let minutes = now.getMinutes();
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+    alert(`Today is ${day}\nIt is ${hours}:${minutes}${ampm}`);
+}
+// currentDayTime();
+
+//#10
