@@ -198,3 +198,12 @@ function currentDayTime() {
 // currentDayTime();
 
 //#10
+function unlimited(...args) {
+    let outputStr = "";
+    for (x in args) {
+        outputStr += args[x];
+    }
+    alert(outputStr);
+}
+// unlimited("angela", "louise", "rae", "april", "5", "2018");
+// unlimited();
