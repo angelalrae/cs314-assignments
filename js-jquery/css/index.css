@@ -1,0 +1,28 @@
+html {
+    font-size: 15;
+}
+
+header {
+    text-align: center;
+    min-height: 100px;
+    line-height: 100px;
+    color: #03440c;
+    font-size: 2.5em;
+    font-family: 'Corben', cursive;
+    background-color: #058e3f;
+}
+
+h3 {
+    font-family: 'montserratmedium';
+}
+
+p {
+    font-family: 'montserratlight';
+}
+
+.user-container {
+    margin: 2em;
+    padding: .2em;
+    border: 5px solid #058e3f;
+    border-radius: 5px;
+}
