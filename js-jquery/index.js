@@ -26,13 +26,18 @@ function createUser(user) {
 
     let todosButton = document.createElement('button');
     todosButton.className = "todos-button";
+    todosButton.id = user.id + "-todosbutton";
     todosButton.innerHTML = 'To Dos';
-    todosButton.click(showTodos);
+    todosButton.firstClick = true;
+    todosButton.addEventListener("click", showTodos);
 
     let albumsButton = document.createElement('button');
     albumsButton.className = "album-button";
+    albumsButton.id = user.id + "-albumbutton";
     albumsButton.innerHTML = 'Albums';
-    albumsButton.click(showAlbums);
+    albumsButton.firstClick = true;
+    albumsButton.addEventListener("click", showAlbums);
+    var albumsClicked = false;
 
     $('.content').append(userContainer);
     $(`#${user.id}`).append(userName);
@@ -44,9 +49,96 @@ function createUser(user) {
 
 
 function showTodos() {
-    console.log("show todos");
+    let id = this.parentNode.id;
+
+    //hide albums if they are shown
+    let albums = this.parentElement.getElementsByClassName("albums-section");
+    $(albums).hide(500);
+
+    //on first click, create section and add todo items
+    if (this.firstClick) {
+        let todosSection = document.createElement('section');
+        todosSection.className = "todo-section";
+        let todoList = document.createElement('ul');
+
+        //get todos from API
+        $(function() {
+            //gets all data on every call?
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/todos",
+                type: "GET",
+                success: function(data) {
+                    //loop through API to find todos with userId same as section id
+                    let index = 0;
+                    while (data[index].userId != id) {
+                        index++;
+                    }
+
+                    //for every todo with the same userId, add todo to list
+                    let currentTodo = data[index];
+                    while (currentTodo.userId == id) {
+                        currentTodo = data[index];
+                        let newTodo = document.createElement('li');
+                        newTodo.innerHTML = currentTodo.title;
+                        todosSection.append(newTodo);
+                        index++;
+                    }
+                }
+            });
+        });
+        this.parentNode.append(todosSection);
+        this.firstClick = false;
+    }
+    //on subsequent calls, toggle section
+    else {
+        let section = this.parentElement.getElementsByClassName("todo-section");
+        $(section).toggle(500);
+    }
 }
 
 function showAlbums() {
-    console.log("show albums");
+    let id = this.parentNode.id;
+
+    //hide todos if they are shown
+    let todos = this.parentElement.getElementsByClassName("todo-section");
+    $(todos).hide(500);
+
+    //on first click, create section and add albums
+    if (this.firstClick) {
+        let albumsSection = document.createElement('section');
+        albumsSection.className = "albums-section";
+        let albumsList = document.createElement('ol');
+
+        //get albums from API
+        $(function() {
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/albums",
+                type: "GET",
+                success: function(data) {
+                    //loop through API to find album with userId same as section id
+                    let index = 0;
+                    while (data[index].userId != id) {
+                        index++;
+                    }
+
+                    //for every album with the same userId, add album to list
+                    let currentAlbum = data[index];
+                    while (currentAlbum.userId == id) {
+                        currentAlbum = data[index];
+                        let newAlbum = document.createElement('li');
+                        newAlbum.innerHTML = currentAlbum.title;
+                        albumsSection.append(newAlbum);
+                        index++;
+                    }
+                }
+            });
+        });
+        this.parentNode.append(albumsSection);
+        this.firstClick = false;
+    }
+    //on subsequent clicks, toggle on/off the section
+    else {
+        let section = this.parentElement.getElementsByClassName("albums-section");
+        $(section).toggle(500);
+    }
 }

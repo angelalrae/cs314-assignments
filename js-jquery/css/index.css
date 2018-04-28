@@ -14,9 +14,11 @@ header {
 
 h3 {
     font-family: 'montserratmedium';
+    font-size: 1.2em;
 }
 
-p {
+p,
+li {
     font-family: 'montserratlight';
 }
 
@@ -25,4 +27,22 @@ p {
     padding: .2em;
     border: 5px solid #058e3f;
     border-radius: 5px;
+}
+
+.button {
+    font-family: 'montserratlight';
+    font-size: .6em;
+    margin: .5em;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li {
+    margin-left: 2em;
 }
