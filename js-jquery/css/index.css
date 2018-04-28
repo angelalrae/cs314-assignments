@@ -35,14 +35,7 @@ li {
     margin: .5em;
 }
 
-ul {
-    list-style: disc;
-}
-
-ol {
-    list-style: decimal;
-}
-
 li {
     margin-left: 2em;
+    line-height: 16px;
 }

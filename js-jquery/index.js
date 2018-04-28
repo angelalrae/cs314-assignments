@@ -18,7 +18,7 @@ function createUser(user) {
 
     //add name, email, and company
     let userName = document.createElement('h3');
-    userName.innerHTML = user.username;
+    userName.innerHTML = user.name;
     let userEmail = document.createElement('p');
     userEmail.innerHTML = "Email: " + user.email;
     let userCompany = document.createElement('p');
@@ -79,6 +79,9 @@ function showTodos() {
                     while (currentTodo.userId == id) {
                         currentTodo = data[index];
                         let newTodo = document.createElement('li');
+                        newTodo.style.listStyleImage = "url('images/circle.png')";
+                        newTodo.done = false;
+                        newTodo.addEventListener("click", todoClick);
                         newTodo.innerHTML = currentTodo.title;
                         todosSection.append(newTodo);
                         index++;
@@ -94,6 +97,16 @@ function showTodos() {
         let section = this.parentElement.getElementsByClassName("todo-section");
         $(section).toggle(500);
     }
+}
+
+//when a todo item is clicked, toggle between checked and unchecked
+function todoClick() {
+    if (!this.done) {
+        this.style.listStyleImage = "url('images/circle-with-check-symbol.png')";
+    } else {
+        this.style.listStyleImage = "url('images/circle.png')";
+    }
+    this.done = !this.done;
 }
 
 function showAlbums() {
