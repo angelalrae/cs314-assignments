@@ -29,9 +29,9 @@ li {
     border-radius: 5px;
 }
 
-.button {
+button {
     font-family: 'montserratlight';
-    font-size: .6em;
+    font-size: .7em;
     margin: .5em;
 }
 
