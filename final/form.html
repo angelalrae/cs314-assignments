@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/Poppins/stylesheet.css">
+    <link rel="stylesheet" href="css/form.css">
+
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+    <title>Final - Form</title>
+</head>
+
+<body>
+    <script src="header.js"></script>
+
+    <div class="background">
+        <div class="form-container">
+            <img class="icon" src="images/mail.png">
+            <h2>Contact Me!</h2>
+            <h5>Use the form below to send me an e-mail, or find me directly at arae@zagmail.gonzaga.edu and on LinkedIn.</h3>
+                <form>
+                    <label for="name">Name</label>
+                    <p id="name-error" class="error-message" style="display: none">*Enter your name*</p>
+                    <input id="name" placeholder="Enter your name">
+
+                    <label for="email">Email</label>
+                    <p id="email-error" class="error-message" style="display: none">*Enter a valid email*</p>
+                    <input id="email" placeholder="name@email.com" type="email">
+
+                    <label for="phone">Phone Number</label>
+                    <p id="phone-error" class="error-message" style="display: none">*Enter a valid phone number*</p>
+                    <input id="phone" placeholder="000-000-0000" type="tel">
+
+                    <label for="message">Message</label>
+                    <p id="message-error" class="error-message" style="display: none">*Enter a message*</p>
+                    <textarea id="message" placeholder="Write message here"></textarea>
+
+                    <div id="send" class="button">Send</div>
+                    <script src="form.js"></script>
+                </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

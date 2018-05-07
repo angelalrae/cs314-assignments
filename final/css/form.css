@@ -1,0 +1,84 @@
+.form-container {
+    position: relative;
+    width: 50%;
+    margin: 3em auto 2em;
+    border: 3px solid #2c666e;
+    background: rgba(44, 102, 110, .7);
+    padding: 1em;
+    box-sizing: border-box;
+    min-height: 400px;
+    text-align: center;
+}
+
+.icon {
+    display: block;
+    height: 4em;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'poppinssemibold';
+    font-size: 1.6em;
+    margin: .3em auto;
+    color: #f0edee;
+}
+
+h5 {
+    margin-bottom: 1em;
+}
+
+form {
+    text-align: left;
+    font-size: 12px;
+    color: #f0edee;
+}
+
+.error-message {
+    color: #ce2f13;
+}
+
+label,
+input {
+    display: block;
+    margin: .2em 0;
+    width: 97%;
+}
+
+input,
+textarea {
+    /* background-color: #f0edee; */
+    padding: 3px;
+    border: 1.4px solid #343434;
+    border-radius: 3px;
+    font-family: 'poppinsregular';
+    font-size: 11px;
+}
+
+textarea {
+    height: 100px;
+    width: 97%;
+    resize: none;
+    /* background-color: #f7fff7; */
+}
+
+.button {
+    width: 50px;
+    margin: 1em auto;
+    text-align: center;
+    border: 1.4px solid #343434;
+    border-radius: 3px;
+    height: 3em;
+    line-height: 3em;
+}
+
+.button:hover {
+    background-color: #f0edee;
+    color: #2c666e;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .form-container {
+        width: 85%;
+    }
+}
