@@ -11,7 +11,8 @@ function initMap() {
     let cote = new google.maps.Marker({
         position: { lat: 37.4977317, lng: -122.262545 },
         title: "Church of the Epiphany",
-        map: map
+        map: map,
+        icon: { url: "images/flower.png" }
     });
     cote.addListener('click', function() {
         coteInfo.open(map, this);
@@ -24,7 +25,8 @@ function initMap() {
     let bamco = new google.maps.Marker({
         position: { lat: 37.4220041, lng: -122.0928069 },
         title: "Bon Appetit @ Google",
-        map: map
+        map: map,
+        icon: { url: "images/flower.png" }
     });
     bamco.addListener('click', function() {
         bamcoInfo.open(map, this);
@@ -32,12 +34,13 @@ function initMap() {
 
     let zestContent = '<div class="info_content"><h3>Zest</h3><p>After graduating from high school, Angela worked at a gluten-free bakery for the summer.</p></div>'
     var zestInfo = new google.maps.InfoWindow({
-        content: bamcoContent
+        content: zestContent
     });
     let zest = new google.maps.Marker({
         position: { lat: 37.502413, lng: -122.257134 },
         title: "Zest Bakery",
-        map: map
+        map: map,
+        icon: { url: "images/flower.png" }
     });
     zest.addListener('click', function() {
         zestInfo.open(map, this);
@@ -50,7 +53,8 @@ function initMap() {
     let skc = new google.maps.Marker({
         position: { lat: 37.554319, lng: -122.3577962 },
         title: "Steve & Kate's Camp",
-        map: map
+        map: map,
+        icon: { url: "images/flower.png" }
     });
     skc.addListener('click', function() {
         skcInfo.open(map, this);
@@ -63,7 +67,8 @@ function initMap() {
     let infa = new google.maps.Marker({
         position: { lat: 37.5113152, lng: -122.2069594 },
         title: "Informatica",
-        map: map
+        map: map,
+        icon: { url: "images/flower.png" }
     });
     infa.addListener('click', function() {
         infaInfo.open(map, this);

@@ -42,21 +42,25 @@ button.addEventListener("click", () => {
 });
 $('form').submit((event) => {
     event.preventDefault();
+    let valid = true;
     //if name not submitted, present error message, otherwise hide
     if (name.value == "") {
         document.getElementById("name-error").style.display = "inline";
+        valid = false;
     } else {
         document.getElementById("name-error").style.display = "none";
     }
     //if not valid email, present error message, otherwise hide
     if (!emailCheck.test(email.value)) {
         document.getElementById("email-error").style.display = "inline";
+        valid = false;
     } else {
         document.getElementById("email-error").style.display = "none";
     }
     //if not valid phone number, present error message, otherwise hide
     if (!phoneCheck.test(phone.value)) {
         document.getElementById("phone-error").style.display = "inline";
+        valid = false;
     } else {
         document.getElementById("phone-error").style.display = "none";
     }
@@ -65,8 +69,17 @@ $('form').submit((event) => {
     if (message.value == "") {
         document.getElementById("message-error").style.display = "inline";
         message.style.border = "1.4px solid #ce2f13";
+        valid = false;
     } else {
         document.getElementById("message-error").style.display = "none";
         message.style.border = "1.4px solid #343434";
+    }
+
+    if (valid) {
+        let comments = document.getElementById("comments");
+        let newComment = document.createElement("p");
+        newComment.innerHTML = name.value + "   " + email.value + "<br>" + phone.value + "<br>" + message.value;
+        newComment.className = "comment";
+        comments.append(newComment);
     }
 })
