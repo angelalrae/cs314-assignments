@@ -12,6 +12,8 @@ $('form').submit((event) => {
     } else { //if title entered, get shows
         let showsPanel = document.getElementById("shows-list");
         showsPanel.innerHTML = "";
+        let detailsPanel = document.getElementById("show-details");
+        detailsPanel.innerHTML = "";
         $(function() {
             $.ajax({
                 url: "http://api.tvmaze.com/search/shows?q=" + showTitle,
@@ -26,6 +28,10 @@ $('form').submit((event) => {
 
 function makeList(data) {
     let showsPanel = document.getElementById("shows-list");
+    let instruction = document.createElement("h4");
+    instruction.innerHTML = "Click title for more information";
+    showsPanel.append(instruction);
+
     let showsList = document.createElement("ol");
     showsList.className = "list";
     let index = 0;

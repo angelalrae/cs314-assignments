@@ -1,4 +1,10 @@
 #map {
     height: 500px;
     width: vw;
+    font-family: 'poppinsthin';
+}
+
+h3 {
+    font-family: 'poppinsregular';
+    font-size: 1.2em;
 }

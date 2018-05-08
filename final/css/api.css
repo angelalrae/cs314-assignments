@@ -59,6 +59,13 @@ input {
     max-width: 400px;
 }
 
+h4 {
+    margin: 1em;
+    font-szie: 1.3em;
+    color: #f0edee;
+    font-family: 'poppinsmedium';
+}
+
 .list {
     list-style-type: decimal;
     margin: 1em;
@@ -68,7 +75,7 @@ li {
     margin: 1em;
 }
 
-li :hover {
+li {
     cursor: pointer;
 }
 
